@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="student"
+            type="com.genus.pro.databinding.section1.Student" />
+    </data>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".section1.DataBinding2Acityvity">
+
+    <TextView
+        android:text="@{Integer.toString(student.id)}"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:id="@+id/rno_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="@{student.name}"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@{student.email}"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
